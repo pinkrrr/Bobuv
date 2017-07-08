@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="Bobuv.Pages.Store" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Bobuv</title>
+    <link rel="stylesheet" href="/Content/Styles.css" />
+    <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="header">
+                <GS:cartsummary runat="server" />
+                <div><img style="height: 73px;" src="/img/logo.png"/></div>
+            </div>
+            <div id="categories">
+                <GS:CategoryLinks runat="server" />
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
